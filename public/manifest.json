@@ -1,0 +1,23 @@
+{
+  "name": "Countdown-Timer",
+  "short_name": "Countdown-Timer",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#131416",
+  "background_color": "#131416",
+  "description": "a Countdown-Timer with TypeScrip.",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "github",
+      "url": "https://amirrahemi01.github.io/Rock-Paper-Scissors-Game/"
+    }
+  ]
+}

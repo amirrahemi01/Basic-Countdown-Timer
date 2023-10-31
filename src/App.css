@@ -1,0 +1,275 @@
+div {
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #fd7398;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #c8c8c8;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+:root {
+  --transition: 0.4s;
+}
+
+.light {
+  --primary-color: #000000;
+  --secondary-color: #000;
+  --second-btn: #DE2556;
+  --hr: #bbbbbb;
+  --lan: #dddddd;
+}
+
+.dark {
+  --primary-color: #000000;
+  --secondary-color: #fff;
+  --second-btn: #878787;
+  --hr: #e2e2e2;
+  --lan: #ebebeb;
+}
+
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: var(--transition);
+}
+
+hr {
+  border: var(--hr) 1px solid;
+  width: 100%;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1440px) {
+  h1 {
+    font-size: 20px;
+    letter-spacing: 15px;
+  }
+
+  .home-container p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 1rem;
+    letter-spacing: 15px;
+  }
+
+  .home-container p {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 15px;
+    letter-spacing: 11px;
+  }
+
+  .home-container p {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-container p {
+    font-size: 13px;
+    width: 90%;
+  }
+
+  .home-container .link {
+    width: 50%;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .child-container {
+    display: flex;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+  }
+
+  .child-right,
+  .child-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .child-left {
+    width: fit-content;
+    height: 60vh;
+  }
+
+  .child-right {
+    width: 100%;
+    height: 40vh;
+    background-color: #0000007e;
+  }
+
+  .title {
+    letter-spacing: 8px;
+  }
+
+  .main-btn {
+    padding: 17px 10px;
+    width: auto;
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .board-item {
+    grid-template-columns: 140px 140px 140px;
+    grid-template-rows: 140px 140px 140px;
+  }
+
+  .board-container button {
+    width: 100%;
+  }
+
+  .game-over {
+    margin: 0;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .home-container p {
+    font-size: 14px;
+    width: 95%;
+  }
+
+  .title {
+    letter-spacing: 6px;
+  }
+
+  .main-btn {
+    padding: 17px 10px;
+    width: auto;
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .board-item {
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px;
+  }
+
+  .board-container button {
+    width: 100%;
+  }
+
+  .game-over {
+    margin: 0;
+    width: 300px;
+  }
+
+  /* .main-background {
+    width: max-content;
+    height: 100vh;
+    display: flex;
+  } */
+
+  /* Setting */
+  .setting-box {
+    width: 90%;
+    height: auto;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 0 auto;
+    display: block;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .setting-display {
+    height: auto;
+  }
+}
+
+
+/* Height */
+@media only screen and (max-width: 500px) {
+
+  body {
+    background: var(--primary-color);
+  }
+
+  .game-status {
+    width: 333px;
+  }
+
+  .game-box {
+    padding: 0;
+    width: auto;
+  }
+
+  .game-box h2 {
+    margin: 0 8rem 0 70px;
+    opacity: 0;
+    width: 70px;
+  }
+
+  .setting-container {
+    all: unset;
+    display: block;
+    background: var(--primary-color);
+  }
+
+  .setting-display {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .setting-box {
+    width: auto;
+    height: auto;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 0 auto;
+    display: block;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+}
