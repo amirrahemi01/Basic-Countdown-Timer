@@ -7,11 +7,11 @@ Welcome to the Countdown Timer ReactJS repository!
 This repository contains a simple and customizable countdown timer component built using ReactJS. Whether you need to create a countdown for an event, a product launch, or any other time-sensitive application, this React component provides an easy and efficient solution.
 
 ### Features:
-
-> - [ ] Countdown to Any Date
+> - [x] Countdown to Any Date
 > - [ ] Pause and Resume
-> - [ ] Sound Notifications
-> - [ ] Responsive Design
+> - [x] Sound Notifications
+> - [x] Responsive Design
+
 ### Key Features
 
 - **Flexible:** It's designed to be flexible and easily integratable into your React projects.
@@ -23,8 +23,8 @@ This repository contains a simple and customizable countdown timer component bui
 - **Built with ReactJS:** Leveraging the power of ReactJS, this timer component is efficient, maintainable, and easy to integrate into your React projects.
 
 ## Screenshots
-<div style="background: #000">
-  <img width="700" src="https://raw.githubusercontent.com/amirrahemi01/Basic-Countdown-Timer/main/Screenshot.png" style="border-radius: 1rem;">
+<div>
+  <img width="825" src="https://raw.githubusercontent.com/amirrahemi01/Basic-Countdown-Timer/main/Screenshot.png" style="border-radius: 1rem;">
 </div>
 
 ## License
