@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Timer.css';
 
 export default function Timer() {
@@ -8,52 +8,68 @@ export default function Timer() {
     const [timerMinutes, setTimerMinutes] = useState("00");
     const [timerSeconds, setTimerSeconds] = useState("00");
 
-    let interval: NodeJS.Timeout | null = null;
+
+    const interval = useRef<NodeJS.Timeout | null>(null);
 
     const startTimer = () => {
         const countdownDate = new Date("December 25, 2023, 00:00:00").getTime();
 
-        interval = setInterval(() => {
-            const now: any = new Date().getTime;
+        interval.current = setInterval(() => {
+            const now = new Date().getTime(); // Correct the way to get the current time
             const distance = countdownDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)));
-            const minutes = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        }, 1000);
+            if (distance < 0) {
+                clearInterval(interval.current!); // Stop the timer
+            } else {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        if (distance < 0) {
-            // stop
-        }
-        
+                // update value
+                setTimerDays(days.toString().padStart(2, "0"));
+                setTimerHours(hours.toString().padStart(2, "0"));
+                setTimerMinutes(minutes.toString().padStart(2, "0"));
+                setTimerSeconds(seconds.toString().padStart(2, "0"));
 
+            }
+
+        }, 1000)
     }
+
+    useEffect(() => {
+        startTimer();
+        return () => {
+            if (interval.current) {
+                clearInterval(interval.current);
+            }
+        };
+    }, []);
 
     return (
         <div className="timer-container">
             <section className="timer">
                 <div>
                     <section>
-                        <p>84</p>
+                        <p>{timerDays}</p>
                         <p><small>days</small></p>
                     </section>
                     <span>:</span>
 
                     <section>
-                        <p>84</p>
+                        <p>{timerHours}</p>
                         <p><small>Hours</small></p>
                     </section>
                     <span>:</span>
 
                     <section>
-                        <p>84</p>
+                        <p>{timerMinutes}</p>
                         <p><small>minutes</small></p>
                     </section>
                     <span>:</span>
 
                     <section>
-                        <p>84</p>
+                        <p>{timerSeconds}</p>
                         <p><small>seconds</small></p>
                     </section>
 
