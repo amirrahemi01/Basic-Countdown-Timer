@@ -52,6 +52,7 @@ export default function Timer() {
     return (
         <div className="timer-container">
             <section className="timer">
+                    <h4>Timer for <b>"December 25, 2023, 00:00:00"</b></h4>
                 <div>
                     <section>
                         <p>{timerDays}</p>
