@@ -21,25 +21,6 @@
   cursor: pointer;
 }
 
-:root {
-  --transition: 0.4s;
-}
-
-.light {
-  --primary-color: #000000;
-  --secondary-color: #000;
-  --second-btn: #DE2556;
-  --hr: #bbbbbb;
-  --lan: #dddddd;
-}
-
-.dark {
-  --primary-color: #000000;
-  --secondary-color: #fff;
-  --second-btn: #878787;
-  --hr: #e2e2e2;
-  --lan: #ebebeb;
-}
 
 * {
   box-sizing: border-box;
@@ -48,7 +29,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #000;
   color: #fff;
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
