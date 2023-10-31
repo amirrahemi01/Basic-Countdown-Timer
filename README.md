@@ -25,7 +25,6 @@ This repository contains a simple and customizable countdown timer component bui
 ## Screenshots
 <div style="background: #000">
   <img width="700" src="https://raw.githubusercontent.com/amirrahemi01/Basic-Countdown-Timer/main/Screenshot.png" style="border-radius: 1rem;">
-  <img width="250" src="https://raw.githubusercontent.com/amirrahemi01/Basic-Countdown-Timer/main/public/logo.png" style="border-radius: 1rem;">
 </div>
 
 ## License
