@@ -2,11 +2,12 @@
 import React from 'react';
 
 import './App.css';
+import Timer from './Components/Timer';
 
 function App() {
   return (
     <>
-    <h1>Amir</h1>
+      <Timer />
     </>
   );
 }
