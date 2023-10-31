@@ -3,54 +3,58 @@
   color: #fff;
   width: 100vw;
   height: 100vh;
-  }
-  
-  .timer {
-    background-color: #1e1e1e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 7em;
-    padding-top: 2em;
-    /* width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 7em;
+  padding-top: 2em;
+  /* width: 100%;
     height: 100%; */
-  }
-  
-  .timer div:first-child {
-    text-align: center;
-  }
-  
-  .timer-icon {
-    font-size: 8em;
-  }
-  
-  h2 {
-    font-weight: 600;
-    margin-bottom: 0.5em;
-  }
-  
-  .timer div:first-child p {
-    color: #f8f8f8f8;
-  }
-  
+}
+
+.timer div:first-child {
+  text-align: center;
+}
+
+.timer-icon {
+  font-size: 8em;
+}
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.timer div:first-child p {
+  color: #f8f8f8f8;
+}
+
+.timer div:last-child {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 3em;
+  padding: 3em;
+  text-align: center;
+}
+
+section p:first-child,
+.timer div:last-child span {
+  font-size: 3em;
+}
+
+@media screen and (max-width: 480px) {
   .timer div:last-child {
-    border: 1px solid #fff;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin-top: 3em;
-    padding: 3em;
-    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
   }
-  
-  section p:first-child, .timer div:last-child span {
-    font-size: 3em;
-  }
-  
-  @media screen and (max-width: 480px) {
-    .timer div:last-child {
-      margin-left: 2em;
-      margin-right: 2em;
-    }
-  }
+}
