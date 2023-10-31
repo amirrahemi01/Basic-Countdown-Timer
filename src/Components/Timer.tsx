@@ -26,6 +26,7 @@ export default function Timer() {
         if (distance < 0) {
             // stop
         }
+        
 
     }
 
