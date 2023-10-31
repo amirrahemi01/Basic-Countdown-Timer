@@ -30,9 +30,11 @@
   font-size: 8em;
 }
 
-h2 {
+h4 {
   font-weight: 600;
   margin-bottom: 0.5em;
+  text-align: center;
+  font-size: 14px;
 }
 
 .timer div:first-child p {
@@ -55,9 +57,27 @@ section p:first-child,
   font-size: 3em;
 }
 
+
+@media screen and (max-width: 1500px) {
+  .timer {
+    width: 85%;
+  }
+}
+
 @media screen and (max-width: 480px) {
+  h4 {
+    font-size: 14px;
+  }
+
+  .timer {
+    width: 95%;
+    height: 95%;
+  }
+
   .timer div:last-child {
     margin-left: 2em;
     margin-right: 2em;
+    font-size: 12px;
+    width: 95%;
   }
 }
