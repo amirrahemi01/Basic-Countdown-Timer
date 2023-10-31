@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Effect from '../Assets/ticing-clock.mp3'
 import './Timer.css';
 
 export default function Timer() {
@@ -8,7 +9,8 @@ export default function Timer() {
     const [timerMinutes, setTimerMinutes] = useState("00");
     const [timerSeconds, setTimerSeconds] = useState("00");
 
-
+    
+    const effect = new Audio(Effect);
     const interval = useRef<NodeJS.Timeout | null>(null);
 
     const startTimer = () => {
@@ -20,6 +22,7 @@ export default function Timer() {
 
             if (distance < 0) {
                 clearInterval(interval.current!); // Stop the timer
+                return alert("done")
             } else {
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -31,7 +34,7 @@ export default function Timer() {
                 setTimerHours(hours.toString().padStart(2, "0"));
                 setTimerMinutes(minutes.toString().padStart(2, "0"));
                 setTimerSeconds(seconds.toString().padStart(2, "0"));
-
+                effect.play();
             }
 
         }, 1000)
